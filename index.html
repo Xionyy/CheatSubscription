@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="keppuicon.ico" type="image/x-icon">
+    <title>Hax4Bytes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .section {
+            flex: 1;
+            max-width: 30%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background-color: #222;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+        h1, h2 {
+            color: #fff;
+        }
+        .features {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .subscribe-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #555;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .subscribe-button:hover {
+            background-color: #777;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #222;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #444;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ddd;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        .form-group button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #777;
+        }
+        .thank-you-message {
+            display: none;
+            background-color: #444;
+            padding: 20px;
+            border: 1px solid #666;
+            border-radius: 8px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+        }
+        .thank-you-message p {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Payment Transaction</h2>
+        <p>GCash number: 09999999999</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h1>Prodigal Ran Ep7</h1>
+            <h2>Hack Features</h2>
+            <div class="features">
+                *Area of Effect<br>
+                *Long Range<br>
+                *Attack Speed<br>
+                *Zoom Hack<br>
+                *Cut Skill<br>
+                *Pet Bug (Skill, Dual Pet Skill, Pet Speed)<br>
+                *Fast Revive (PK)<br>
+                "$10.00 / 500PHP"
+            </div>
+            <a href="#" class="subscribe-button" data-package="prodigal" id="subscribeBtn">Subscribe</a>
+        </div>
+        <div class="section">
+            <h1>Heroic Ran Ep7</h1>
+            <h2>Hack Features</h2>
+            <div class="features">
+                *Area of Effect<br>
+                *Long Range<br>
+                *Attack Speed<br>
+                *Zoom Hack<br>
+                *Cut Skill<br>
+                *Pet Bug (Skill, Dual Pet Skill, Pet Speed)<br>
+                *Fast Revive (PK)<br>
+                "$10.00 / 500PHP"
+            </div>
+            <a href="#" class="subscribe-button" data-package="heroic" id="subscribeBtn2">Subscribe</a>
+        </div>
+        <div class="section">
+            <h1>Ranatiko Ran Ep7</h1>
+            <h2>Hack Features</h2>
+            <div class="features">
+                *Area of Effect<br>
+                *Long Range<br>
+                *Attack Speed<br>
+                *Zoom Hack<br>
+                *Cut Skill<br>
+                *Pet Bug (Skill, Dual Pet Skill, Pet Speed)<br>
+                *Fast Revive (PK)<br>
+                "$10.00 / 500PHP"
+            </div>
+            <a href="#" class="subscribe-button" data-package="ranatiko" id="subscribeBtn3">Subscribe</a>
+        </div>
+    </div>
+
+    <div id="subscribeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Subscribe</h2>
+            <form id="subscribeForm" action="https://formspree.io/f/meojlvzd" method="POST">
+                <div class="form-group">
+                    <label for="gcashNumber">Gcash Number:</label>
+                    <input type="text" id="gcashNumber" name="gcashNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="referenceNumber">Reference Number:</label>
+                    <input type="text" id="referenceNumber" name="referenceNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="totalPrice">Total Price:</label>
+                    <input type="text" id="totalPrice" name="totalPrice" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="thankYouMessage" class="thank-you-message">
+        <p>It may take a while before validating the transaction. Please always check your email.</p>
+    </div>
+
+    <script>
+        var modal = document.getElementById("subscribeModal");
+        var btns = document.querySelectorAll(".subscribe-button");
+        var span = document.getElementById("closeModal");
+        var form = document.getElementById("subscribeForm");
+        var thankYouMessage = document.getElementById("thankYouMessage");
+        var quantityInput = document.getElementById("quantity");
+        var totalPriceInput = document.getElementById("totalPrice");
+
+        // Function to update total price
+        function updateTotalPrice() {
+            var quantity = parseInt(quantityInput.value, 10) || 0;
+            var totalPrice = quantity * 500;
+            totalPriceInput.value = totalPrice.toFixed(2);
+        }
+
+        // Add event listener to quantity input to update total price on change
+        quantityInput.addEventListener('input', updateTotalPrice);
+
+        btns.forEach(function(btn) {
+            btn.onclick = function(event) {
+                event.preventDefault();
+                modal.style.display = "block";
+            }
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        form.onsubmit = function(event) {
+            event.preventDefault();
+            var formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    modal.style.display = "none";
+                    thankYouMessage.style.display = "block";
+                    setTimeout(function() {
+                        thankYouMessage.style.display = "none";
+                    }, 5000); // Hide message after 5 seconds
+                } else {
+                    alert('Failed to send the form. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('Failed to send the form. Please try again.');
+            });
+        }
+    </script>
+</body>
+</html>
